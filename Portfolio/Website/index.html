@@ -3,19 +3,84 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Webpage</title>
+  <title>Photography Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Hello — this is my webpage</h1>
+  <header class="site-header">
+    <div class="brand">
+      <a href="#home">YourStudio</a>
+    </div>
+
+    <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+      ☰
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <p>Welcome! Click the button to see a message:</p>
-    <button id="showBtn">Show message</button>
-    <div id="msg" aria-live="polite"></div>
+  <main id="home">
+    <section id="about" class="panel">
+      <h2>About</h2>
+      <p>Welcome to YourStudio — short blurb about your photography business, your style, and contact basics.</p>
+    </section>
+
+    <section id="portfolio" class="panel">
+      <h2>Portfolio</h2>
+      <p>Click an image to open the full-size version in a new tab.</p>
+
+      <div class="gallery">
+        <!-- Add your images to an "images/" folder inside your repo and update names -->
+        <a href="images/photo1.jpg" target="_blank" rel="noopener">
+          <img src="images/photo1.jpg" alt="Photo 1">
+        </a>
+        <a href="images/photo2.jpg" target="_blank" rel="noopener">
+          <img src="images/photo2.jpg" alt="Photo 2">
+        </a>
+        <a href="images/photo3.jpg" target="_blank" rel="noopener">
+          <img src="images/photo3.jpg" alt="Photo 3">
+        </a>
+        <a href="images/photo4.jpg" target="_blank" rel="noopener">
+          <img src="images/photo4.jpg" alt="Photo 4">
+        </a>
+        <!-- Duplicate the <a> block above for additional photos -->
+      </div>
+    </section>
+
+    <section id="services" class="panel">
+      <h2>Services</h2>
+      <ul>
+        <li>Portrait sessions</li>
+        <li>Event photography</li>
+        <li>Commercial shoots</li>
+      </ul>
+    </section>
+
+    <section id="pricing" class="panel">
+      <h2>Pricing</h2>
+      <table class="pricing-table">
+        <thead>
+          <tr><th>Package</th><th>Includes</th><th>Price</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Basic</td><td>1-hour shoot, 10 edits</td><td>$150</td></tr>
+          <tr><td>Standard</td><td>2-hour shoot, 25 edits</td><td>$300</td></tr>
+          <tr><td>Premium</td><td>Half-day, full edits, prints</td><td>$650</td></tr>
+        </tbody>
+      </table>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> YourStudio — <a href="mailto:contact@yoursite.example">contact@yoursite.example</a></p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
