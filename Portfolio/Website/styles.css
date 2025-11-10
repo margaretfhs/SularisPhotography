@@ -1,0 +1,16 @@
+/* styles.css */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.5;
+  color: #222;
+}
+header { margin-bottom: 1rem; }
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+#msg { margin-top: 1rem; font-weight: 600; color: #064; }
