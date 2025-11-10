@@ -80,6 +80,14 @@ main{
 }
 .gallery a:hover img{ transform:scale(1.03); }
 
+.gallery img {
+  width: 100%;
+  height: 200px;        /* thumbnail height — adjust as you like */
+  object-fit: cover;    /* fills the box while preserving crop */
+  display: block;
+}
+.gallery a { display:block; overflow:hidden; border-radius:6px; }
+
 /* Responsive gallery */
 @media (min-width:600px){
   .gallery{ grid-template-columns:repeat(3, 1fr); }
