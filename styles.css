@@ -151,6 +151,15 @@ main{
   .gallery { column-count: 4; }
 }
 
+.panel1 {
+  background: linear-gradient(
+    to bottom,
+    #faf9f7 0%,
+    #f2f0ed 50%,
+    #e8e6e3 100%
+);
+}
+
 /* Pricing table */
 .pricing-table{ width:100%; border-collapse:collapse; margin-top:0.5rem; }
 .pricing-table th, .pricing-table td{ padding:0.5rem; border:1px solid #eee; text-align:left; }
