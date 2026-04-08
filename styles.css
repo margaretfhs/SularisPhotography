@@ -97,7 +97,7 @@ main{
   .gallery { column-count: 4; }
 }
 
-panel. {
+.panel {
   background: red;
     
     /* linear-gradient(
