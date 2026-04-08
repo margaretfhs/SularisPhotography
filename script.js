@@ -41,6 +41,7 @@ nextBtn.addEventListener('click', () => {
   showImage();
 });
 
+  
    // Mobile ligthbox 
 
   let startX = 0;
@@ -63,6 +64,8 @@ lightbox.addEventListener('touchend', (e) => {
     showImage();
   }
 });
+
+  lightbox.classList.add('show');
   
   // Insert current year
   var yEl = document.getElementById('year');
