@@ -13,12 +13,6 @@ body{
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
   margin:0;
   color:#222;
-  background: linear-gradient(
-    to bottom,
-    #faf9f7 0%,
-    #f2f0ed 50%,
-    #e8e6e3 100%
-);
   line-height:1.4;
 }
 .site-header{
@@ -31,6 +25,7 @@ body{
   position:sticky;
   top:0;
   z-index:10;
+  border-style: none;
 }
 .brand a{ font-weight:700; text-decoration:none; color:var(--accent); font-size:1.1rem; }
 .nav-toggle{
