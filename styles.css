@@ -65,7 +65,7 @@ main{
 .panel h2{ margin-top:0; }
 
 /* Lightbox overlay */
-.lightbox {
+.glightbox {
   position: fixed;
   top: 0;
   left: 0;
@@ -80,13 +80,13 @@ main{
   z-index: 999;
 }
 
-.lightbox img {
+.glightbox img {
   max-width: 90%;
   max-height: 85%;
   border-radius: 8px;
 }
 
-.lightbox-close {
+.glightbox-close {
   position: absolute;
   top: 20px;
   right: 25px;
@@ -99,8 +99,8 @@ main{
   line-height: 1;
 }
 
-.lightbox-prev,
-.lightbox-next {
+.glightbox-prev,
+.glightbox-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -111,15 +111,15 @@ main{
   user-select: none;
 }
 
-.lightbox-prev { left: 10px; }
-.lightbox-next { right: 10px; }
+.glightbox-prev { left: 10px; }
+.glightbox-next { right: 10px; }
 
-.lightbox {
+.glightbox {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.lightbox.show {
+.glightbox.show {
   opacity: 1;
 }
 
