@@ -93,7 +93,7 @@ main{
   .gallery { column-count: 4; }
 }
 
-pane1. {
+panel. {
   background: linear-gradient(
     to bottom,
     #faf9f7 0%,
