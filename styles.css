@@ -93,6 +93,14 @@ main{
   .gallery { column-count: 4; }
 }
 
+pane1. {
+  background: linear-gradient(
+    to bottom,
+    #faf9f7 0%,
+    #f2f0ed 50%,
+    #e8e6e3 100%
+);
+}
 
 /* Pricing table */
 .pricing-table{ width:100%; border-collapse:collapse; margin-top:0.5rem; }
