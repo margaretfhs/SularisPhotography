@@ -64,64 +64,6 @@ main{
 .panel{ margin-bottom:2rem; }
 .panel h2{ margin-top:0; }
 
-/* Lightbox overlay */
-.glightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(10px);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.glightbox img {
-  max-width: 90%;
-  max-height: 85%;
-  border-radius: 8px;
-}
-
-.glightbox-close {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  font-size: 2.5rem;
-  color: white;
-  cursor: pointer;
-  background: rgba(0,0,0,0.4);
-  border-radius: 50%;
-  padding: 0.2em 0.5em;
-  line-height: 1;
-}
-
-.glightbox-prev,
-.glightbox-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 3rem;
-  color: white;
-  cursor: pointer;
-  padding: 0 15px;
-  user-select: none;
-}
-
-.glightbox-prev { left: 10px; }
-.glightbox-next { right: 10px; }
-
-.glightbox {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.glightbox.show {
-  opacity: 1;
-}
 
 /* Gallery grid */
 .gallery {
