@@ -30,7 +30,6 @@ body{
   border-bottom:1px solid #eee;
   position:sticky;
   top:0;
-  background:var(--bg);
   z-index:10;
 }
 .brand a{ font-weight:700; text-decoration:none; color:var(--accent); font-size:1.1rem; }
