@@ -73,6 +73,7 @@ main{
   height: 100%;
   background: rgba(0,0,0,0.8);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
   display: none;
   justify-content: center;
   align-items: center;
@@ -88,10 +89,38 @@ main{
 .lightbox-close {
   position: absolute;
   top: 20px;
-  right: 30px;
-  font-size: 2rem;
+  right: 25px;
+  font-size: 2.5rem;
   color: white;
   cursor: pointer;
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  padding: 0.2em 0.5em;
+  line-height: 1;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  padding: 0 15px;
+  user-select: none;
+}
+
+.lightbox-prev { left: 10px; }
+.lightbox-next { right: 10px; }
+
+.lightbox {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox.show {
+  opacity: 1;
 }
 
 /* Gallery grid */
