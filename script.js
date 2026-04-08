@@ -12,28 +12,56 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // ===== LIGHTBOX CODE (THIS IS THE IMPORTANT PART) =====
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.querySelector('.lightbox-img');
-  const closeBtn = document.querySelector('.lightbox-close');
+const links = document.querySelectorAll('.gallery a');
+let currentIndex = 0;
 
-  document.querySelectorAll('.gallery a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault(); // 🚨 THIS stops new tab behavior
-      lightbox.style.display = 'flex';
-      lightboxImg.src = this.href;
-    });
+links.forEach((link, index) => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    currentIndex = index;
+    showImage();
   });
+});
 
-  closeBtn.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-  });
+const prevBtn = document.querySelector('.lightbox-prev');
+const nextBtn = document.querySelector('.lightbox-next');
 
-  lightbox.addEventListener('click', (e) => {
-    if (e.target !== lightboxImg) {
-      lightbox.style.display = 'none';
-    }
-  });
+function showImage() {
+  lightbox.style.display = 'flex';
+  lightboxImg.src = links[currentIndex].href;
+}
 
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + links.length) % links.length;
+  showImage();
+});
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % links.length;
+  showImage();
+});
+
+   // Mobile ligthbox 
+
+  let startX = 0;
+
+lightbox.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+
+lightbox.addEventListener('touchend', (e) => {
+  let endX = e.changedTouches[0].clientX;
+  let diff = startX - endX;
+
+  if (diff > 50) {
+    // swipe left → next
+    currentIndex = (currentIndex + 1) % links.length;
+    showImage();
+  } else if (diff < -50) {
+    // swipe right → prev
+    currentIndex = (currentIndex - 1 + links.length) % links.length;
+    showImage();
+  }
 });
   
   // Insert current year
