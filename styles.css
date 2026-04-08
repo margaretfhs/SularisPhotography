@@ -94,12 +94,14 @@ main{
 }
 
 panel. {
-  background: linear-gradient(
+  background: red;
+    
+    /* linear-gradient(
     to bottom,
     #faf9f7 0%,
     #f2f0ed 50%,
     #e8e6e3 100%
-);
+); */
 }
 
 /* Pricing table */
